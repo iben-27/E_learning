@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notification</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+   
+    }
+  button {
+    padding: 10px 20px;
+    background-color: #244246;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
+  .forum {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    }
+  a {
+    text-decoration: none;
+    color: black;
+    }
+ .tugas {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    border: 1px solid black;
+    text-align: center;
+    }
+    #logo {
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    
+  }
+  #btn{
+    text-align: center;
+    padding-top: 3%;
+  }
+  h1{
+    text-align: center;
+    padding-top: 5%;
+  }
+  </style>
+</head>
+<body>
+  <img onclick="home()" id="logo" src="fl.jpg" alt="">
+  <h1>Notification</h1>
+  <div class="conten">
+  <main>
+    <a href="Materi1.html"><div class="forum">
+      <h2>Materi</h2>
+      <div>Materi Baru: Materi dasar Strukture Data</div>
+      <div class="content">
+        <p>29 Desember 2023</p>
+      </div>
+    </div></a>
+    <div class="tugas">
+      <h2>Tugas</h2>
+      <a href="Contoh-Tugas.html">Tugas baru: Strukture Data</a>
+      <div class="course">
+      <p>Deadline:31 Des 2023</p>
+      <p>Pukul : 23.59</p>
+    </div>
+    </div>
+    </div>
+    <div id="btn">
+  <button onclick="showNotification()">Show Notification</button>
+  </div>
+  <script>
+      function home (){
+        window.history.back();
+      }
+    function showNotification() {
+      if (Notification.permission !== 'granted') {
+        Notification.requestPermission().then(function (permission) {
+          if (permission === "granted") {
+            new Notification("Hello!");
+          }
+        });
+      } else {
+        new Notification("Hello!");
+      }
+    }
+  </script>
+</body>
+</html>

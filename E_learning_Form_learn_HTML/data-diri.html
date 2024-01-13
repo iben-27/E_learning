@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil </title>
+    <style>
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            padding: 10px;
+        }
+        h2{
+        text-align: center;
+        }
+        .profile {
+            background-color: gainsboro;
+            font-family: Arial, sans-serif;
+            border: solid;
+            width: 50%;
+            margin: auto;
+            margin-top: 5%;
+        }
+        #logo {
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <img onclick="home()" id="logo" src="fl.jpg" alt="">
+    <div class="profile">
+    <h1>Selamat datang, .....</h1>
+    <h2>Informasi Akun</h2>
+    <p>Username: </p>
+    <p>Email: </p>
+    <p>Country: </p>
+    <p>City/town: </p>
+    <p>Timezone: </p>
+</div>
+<script>
+    function home (){
+        window.history.back();
+      }
+</script>
+</body>
+</html>

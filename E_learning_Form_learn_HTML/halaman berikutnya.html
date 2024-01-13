@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>From learn</title>
+</head>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;  
+  }
+  a {
+    text-decoration: none;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header {
+    padding: 10px;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid black;
+    animation: gradient 15s ease infinite;
+    background: linear-gradient(-45deg,rgb(101, 96, 245), rgb(0, 182, 237), rgb(102, 97, 249), rgb(43, 18, 139));
+    background-size: 400% 400%;  
+    }
+    @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  }
+  .logo {
+    width: 100px;
+    border-radius: 100%;
+  }
+  .font{
+  text-align: center;
+  margin-top: -70px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 1px 15px rgb(0, 0, 0);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .from.learn {
+    width: 80px;
+    border-radius: 10%;
+  }
+  main {
+    padding: 20px;
+  }
+
+  .card-box {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 300px;
+    height: 250px;
+    border-radius: 10%;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #000000;
+    text-align: center;
+    margin: 40px;
+    cursor: pointer;
+  }
+
+  .image {
+    width: 100%;
+    height: 70%;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  main {
+    width: 100%;
+    height: 100vh;
+  }
+
+  h2 {
+    color: #000000;
+  }
+
+  nav {
+    background-color: #545454;
+    color: #fff;
+    padding: 5px;
+    padding-top: px;
+    border-radius: 20px 20px 20px 20px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav li {
+    position: relative;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10%;
+  }
+
+  nav ul li:hover>ul {
+    display: inherit;
+  }
+
+  nav ul ul li {
+    position: relative;
+    min-width: 150px;
+  }
+
+  nav ul ul a {
+    padding: 10px;
+    color: #fff;
+    display: block;
+  }
+
+ nav ul li, ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  li:hover {
+    background-color: #048e80;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+</style>
+
+<body>
+  <div class="container">
+    <header>
+     <img class="logo" src="fl.jpg" alt="">
+     <h1 class="font">Welcome Form Learn</h1>
+    </header>
+    <nav>
+      <ul>
+        <li id="home">
+          <a href="halaman berikutnya.html">Dashboard</a>
+          <ul>
+            <li><a href="home.html">Setelan</a></li>
+            <li><a href="notifikasi.html">Notifikasi</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Kelas</a>
+          <ul>
+            <li><a href="struktur data.html">struktur data</a></li>
+            <li><a href="pemweb.html">Pemrograman Web</a></li>
+            <li><a href="ETI.html">ETI</a></li>
+            <li><a href="SIT.html">SIT</a></li>
+            <li><a href="ANSI.html">ANSI</a></li>
+            <li><a href="Sistem Oprasi.html">Sistem Oprasi</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="data-diri.html">Profile</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="card-box">
+        <div class="card c1">
+          <div class="image">
+          <img src="animasi2.png" alt="">
+          </div>
+          <div class="dtail">
+           <a href="struktur data.html" ><h2>Strukture Data</h2></a>
+          </div>
+        </div>
+        <div class="card c2">
+          <div class="image">
+            <img src="animasi.jpg" alt="">
+          </div>
+          <div class="dtail">
+            <a href="pemweb.html"><h2>Pemrogaman Web</h2></a>
+          </div>
+        </div>
+        <div class="card c3">
+          <div class="image">
+            <img src="animasi5.png" alt="">
+          </div>
+          <div class="dtail">
+           <a href="ETI.html"><h2>Etika Teknologi Informasi</h2></a>
+          </div>
+        </div>
+        <div class="card c4">
+          <div class="image">
+            <img src="anmsi.jpeg" alt="">
+          </div>
+          <div class="dtail">
+            <a href="SIT.html"><h2>SIT</h2></a>
+          </div>
+        </div>
+        <div class="card c5">
+          <div class="image">
+            <img src="msi.jpg" alt="">
+          </div>
+          <div class="dtail">
+            <a href="ANSI.html"><h2>ANSI</h2></a>
+          </div>
+        </div>
+        <div class="card c6">
+          <div class="image">
+            <img src="anmsi1.jpg" alt="">
+          </div>
+          <div class="dtail">
+            <a href="Sistem Oprasi.html"><h2>Sistem Oprasi</h2></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("click", function (e) {
+        var dropdowns = document.querySelectorAll(".dropdown");
+        dropdowns.forEach(function (dropdown) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.querySelector("ul").style.display = "none";
+          }
+        });
+      });
+      
+      var homeDropdown = document.getElementById("home");
+      homeDropdown.addEventListener("click", function () {
+        var submenu = homeDropdown.querySelector("ul");
+        submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+      });
+    </script>
+</body>
+</html>

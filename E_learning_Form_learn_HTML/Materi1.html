@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        padding-top: 5%;
+    }
+    .container {
+        padding: 10px;
+    }
+    h3 {
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px 0px 20px 10px;
+        width: 40%;
+        padding: 10px;
+    }
+    #logo {
+        width: 50px;
+        position: absolute;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+    <img onclick="home()" id="logo" src="fl.jpg" alt="">
+    <h1>Topik 1</h1>
+    <h3>Pengertian Dasar Struktur Data</h3>
+    <p>Struktur data adalah cara menyimpan dan mengatur data di dalam komputer sehingga data tersebut lebih mudah untuk diakses dan diolah. Struktur data dapat didefinisikan sebagai cara mengorganisasikan data sehingga data tersebut dapat diakses dan dimanipulasi dengan mudah dan efisien. <br>
+        Berikut adalah beberapa pengertian dasar struktur data: <br>
+        -Elemen data adalah unit terkecil dari data yang disimpan dalam struktur data. <br>
+        -Operasi dasar adalah operasi yang dapat dilakukan pada struktur data, seperti memasukkan, menghapus, dan mencari elemen data. <br>
+        -Tipe struktur data adalah jenis struktur data yang ditentukan oleh cara elemen data disimpan dan diakses.</p>
+        <h3>Jenis-Jenis Struktur Data</h3>
+    <p>Struktur data dapat dibagi menjadi dua jenis utama, yaitu: <br>
+        1.Struktur data linear adalah struktur data yang elemen-elemennya terurut secara linear, yaitu satu elemen didahului dan diakhiri oleh elemen lainnya. Contoh struktur data linear adalah larik, stack, dan queue. <br>
+        2.Struktur data non-linear adalah struktur data yang elemen-elemennya tidak terurut secara linear. Contoh struktur data non-linear adalah pohon, graf, dan hash table.
+        
+        <h3>Struktur Data Linear</h3>
+        <p>Struktur data linear adalah struktur data yang elemen-elemennya terurut secara linear. Berikut adalah beberapa contoh struktur data linear: <br>
+        1.Larik (array) adalah struktur data yang menyimpan sekumpulan elemen yang bertipe sama. Setiap elemen larik memiliki indeks yang unik. Larik dapat diakses secara langsung melalui indeksnya. <br>
+        2.Stack adalah struktur data yang mirip dengan tumpukan. Elemen yang dimasukkan terakhir akan menjadi elemen yang dikeluarkan pertama kali (LIFO, last in first out). <br>
+        3.Queue adalah struktur data yang mirip dengan antrian. Elemen yang dimasukkan pertama kali akan menjadi elemen yang dikeluarkan pertama kali (FIFO, first in first out).</p>
+        
+        <h3>Struktur Data Non-Linear</h3>
+        <p>-Struktur data non-linear adalah struktur data yang elemen-elemennya tidak terurut secara linear. Berikut adalah beberapa contoh struktur data non-linear: <br>
+        -Pohon adalah struktur data yang terdiri dari node-node yang saling terhubung. Node-node pohon dapat memiliki satu atau lebih anak. Pohon dapat digunakan untuk menyimpan data yang hirarkis. <br>
+        -Graf adalah struktur data yang terdiri dari node-node yang saling terhubung. Node-node graf dapat memiliki satu atau lebih tetangga. Graf dapat digunakan untuk menyimpan data yang tidak hirarkis. <br>
+        -Hash table adalah struktur data yang menggunakan fungsi hash untuk menyimpan data. Fungsi hash akan mengubah data menjadi indeks yang unik. Hash table dapat digunakan untuk menyimpan data secara efisien.</p>
+        
+        <h3>Kegunaan Struktur Data</h3>
+        <p>1.Struktur data memiliki banyak kegunaan dalam pemrograman, antara lain: <br>
+        2.Mempermudah akses dan pengolahan data. Struktur data dapat membantu programmer untuk mengakses dan mengolah data dengan lebih mudah dan efisien. <br>
+        3.Meningkatkan performa program. Struktur data yang tepat dapat meningkatkan performa program dengan mengurangi jumlah operasi yang diperlukan untuk mengakses dan mengolah data. <br>
+        4.Meningkatkan keandalan program. Struktur data yang tepat dapat meningkatkan keandalan program dengan mengurangi kemungkinan terjadinya kesalahan.</p>
+        
+        <h3>Contoh Aplikasi Struktur Data</h3>
+        <p>-Struktur data digunakan dalam berbagai macam aplikasi, antara lain: <br>
+        -Sistem operasi. Struktur data digunakan untuk menyimpan informasi tentang file, proses, dan memori. <br>
+        -Database. Struktur data digunakan untuk menyimpan data dalam database. <br>
+        -Aplikasi komputasi grafis. Struktur data digunakan untuk menyimpan informasi tentang objek-objek grafis. <br>
+        -Aplikasi jaringan. Struktur data digunakan untuk menyimpan informasi tentang node-node jaringan.</p>
+    </div>
+    <script>
+        function home (){
+        window.history.back();
+      }
+    </script>
+</body>
+</html>

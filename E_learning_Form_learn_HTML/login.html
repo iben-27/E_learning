@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Buat Akun</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            margin-top: 0;
+        }
+
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .toggle-link {
+            cursor: pointer;
+            color: #4caf50;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 5px;
+        }
+        img {
+            width: 60px;
+            height: 60px;
+            margin-left: 120px;
+            border-radius: 50%;
+        }
+    </style>
+<script>
+    function sendPassword() {
+        var emailInput = document.getElementById('signupEmail');
+        var email = emailInput.value;
+
+        // Validasi email
+        if (!isValidEmail(email)) {
+            document.getElementById('emailError').innerText = 'Email tidak valid';
+            return;
+        }
+
+        document.getElementById('emailError').innerText = '';
+
+        // Notifikasi
+        var password = '123456'; // Kata sandi tetap
+        alert('Kata sandi sudah dikirim ke email ' + email + '. Klik OK untuk melanjutkan.');
+
+        // Jika pengguna mengklik OK pada notifikasi, tampilkan kata sandi dalam alert
+        alert('Kata sandi: ' + password);
+    }
+
+    function isValidEmail(email) {
+        return email.includes('@gmail.com');
+    }
+
+    function login() {
+        // Logika login (sesuaikan sesuai kebutuhan)
+        var emailInput = document.getElementById('email');
+        var passwordInput = document.getElementById('password');
+        var email = emailInput.value;
+        var password = passwordInput.value;
+
+        // Validasi email
+        if (!isValidEmail(email)) {
+            document.getElementById('emailErrorLogin').innerText = 'Email tidak valid';
+            return;
+        }
+        document.getElementById('emailErrorLogin').innerText = '';
+
+        // Validasi kata sandi
+        var correctPassword = '123456';
+        if (password !== correctPassword) {
+            document.getElementById('passwordErrorLogin').innerText = 'Kata sandi salah';
+            return;
+        }
+        document.getElementById('passwordErrorLogin').innerText = '';
+
+        window.location.href = 'halaman berikutnya.html';
+    }
+</script>
+</head>
+<body>
+    <form id="loginForm">
+        <img src="fl.jpg" alt="">
+        <h2>Login</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <p class="error-message" id="emailErrorLogin"></p>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <p class="error-message" id="passwordErrorLogin"></p>
+        <button type="button" onclick="login()">Login</button>
+        <p>Belum punya akun? <a class="toggle-link" onclick="toggleForm()">Buat Akun</a></p>
+    </form>
+    <form id="signupForm" style="display: none;">
+        <img src="fl.jpg" alt="">
+        <h2>Buat Akun</h2>
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" required>
+        <p class="error-message" id="emailError"></p>
+        <button type="button" onclick="sendPassword()">Kirim Kata Sandi</button>
+        <!-- <p class="success-message"></p> -->
+        <p>Sudah punya akun? <a class="toggle-link" onclick="toggleForm()">Login</a></p>
+    </form>
+    <script>
+        function toggleForm() {
+            var loginForm = document.getElementById('loginForm');
+            var signupForm = document.getElementById('signupForm');
+            loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+            signupForm.style.display = signupForm.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

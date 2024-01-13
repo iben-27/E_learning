@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>From learn</title>
+</head>
+<style>
+  body{
+    background-color: #ffffff;
+  }
+  h2 {
+    color: #000000;
+  }
+
+  nav {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 20px 20px 20px 20px;
+  }
+  #logo {
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav li {
+    position: relative;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+  }
+
+  nav ul li:hover>ul {
+    display: inherit;
+  }
+
+  nav ul ul li {
+    position: relative;
+    min-width: 150px;
+  }
+
+  nav ul ul a {
+    padding: 10px;
+    color: #ffffff;
+    display: block;
+  }
+
+ nav ul li, ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
+ .conten {
+  background-color: #fe0713;
+  color: #000000;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px 20px 20px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+div {
+  margin-bottom: 10px;
+}
+.Pengumuman h2 {
+  margin-top: 20px;
+  border-radius: 20px 0px 20px 10px;
+  background-color: #1bdc98;
+  width: 15%;
+  padding: 10px;
+}
+.forum {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.tugas {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.course {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgb(126, 126, 126);
+  text-align: right;
+  color: rgb(62, 62, 62);
+  margin-top: 10px;
+}a {
+  text-decoration: none;
+  color: #000000;
+}
+.content {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgb(126, 126, 126);
+  text-align: right;
+  color: rgb(62, 62, 62);
+  margin-top: 10px;
+}
+</style>
+<body>
+  <div class="container">
+    <nav>
+      <img onclick="home()" id="logo" src="fl.jpg" alt="">
+      <ul>
+        <li id="home">
+          <a href="halaman berikutnya.html">Dashboard</a>
+          <ul>
+            <li><a href="home.html">Setelan</a></li>
+            <li><a href="notifikasi.html">Notifikasi</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Kelas</a>
+          <ul>
+            <li><a href="struktur data.html">struktur data</a></li>
+            <li><a href="pemweb.html">Pemrograman Web</a></li>
+            <li><a href="ETI.html">ETI</a></li>
+            <li><a href="SIT.html">SIT</a></li>
+            <li><a href="ANSI.html">ANSI</a></li>
+            <li><a href="Sistem Oprasi.html">Sistem Oprasi</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="data-diri.html">Profile</a></li>
+      </ul>
+    </nav>
+    <div class="conten">
+      <h1>Sistem Informasi Terintegrasi</h1>
+    </div>
+    <main>
+      <div class="Pengumuman">
+        <h2>Pengumuman</h2>
+      </div>
+      <div class="forum">
+        <h2>Materi</h2>
+        <a href="#">Materi baru: Sistem Informasi Terintegrasi</a>
+        <div class="content">
+          <p>04 Januari 2024</p>
+        </div>
+      </div>
+      <div class="tugas">
+        <h2>Tugas</h2>
+        <a href="#">Tugas baru: Sistem Informasi Terintegrasi</a>
+        <div class="course">
+        <p>Deadline:31 Des 2023</p>
+      </div>
+      </div>
+    </main>
+    <script>
+      function home (){
+        window.history.back();
+      }
+      document.addEventListener("click", function (e) {
+        var dropdowns = document.querySelectorAll(".dropdown");
+        dropdowns.forEach(function (dropdown) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.querySelector("ul").style.display = "none";
+          }
+        });
+      });
+
+      var homeDropdown = document.getElementById("home");
+      homeDropdown.addEventListener("click", function () {
+        var submenu = homeDropdown.querySelector("ul");
+        submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+      });
+    </script>
+</body>
+</html>
